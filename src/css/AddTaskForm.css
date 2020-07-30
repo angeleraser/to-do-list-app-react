@@ -113,7 +113,7 @@
   order: 2;
   transition: all 0s;
   justify-content: flex-start;
-  font-size: 10px;
+  font-size: 12px;
   transform: translateX(-200%);
   padding: 0 22px 30px;
   transition: all .9s;
@@ -188,7 +188,11 @@
   background-color: var(--primary-blue);
   border-radius: 10px;
 }
-
+@media screen and (min-width:600px) {
+  .task-form .radio-inputs {
+    font-size: 14px;
+  }
+}
 @media screen and (max-height:500px){
 
   .task-form.visible input[type = "datetime-local"], .task-form::after, .task-form .save-task {
