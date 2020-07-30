@@ -6,6 +6,7 @@
   height: 0px;
   width: 100%;
   z-index: 30;
+  position: relative;
   transition: all 0.9s;
   border-radius: 40px;
   font-family: "Manrope", sans-serif;
@@ -112,7 +113,7 @@
   order: 2;
   transition: all 0s;
   justify-content: flex-start;
-  font-size: 14px;
+  font-size: 10px;
   transform: translateX(-200%);
   padding: 0 22px 30px;
   transition: all .9s;
@@ -168,4 +169,53 @@
   height: 30px;
   width: 50px;
   cursor: pointer;
+}
+/* width */
+.task-form::-webkit-scrollbar {
+  width: 8px;
+}
+.task-form .task-card:not(:last-child) {
+  margin-bottom: 20px;
+}
+/* Track */
+.task-form::-webkit-scrollbar-track {
+  background-color: var(--secondary-blue);
+  border-radius: 10px;
+}
+
+/* Handle */
+.task-form::-webkit-scrollbar-thumb {
+  background-color: var(--primary-blue);
+  border-radius: 10px;
+}
+
+@media screen and (min-width:600px) {
+  .task-form .radio-inputs {
+    font-size: 14px;
+  }
+}
+@media screen and (max-height:500px){
+
+  .task-form.visible input[type = "datetime-local"], .task-form::after, .task-form .save-task {
+    flex-shrink: 0;
+  }
+ 
+  .task-form .radio-inputs{
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: flex-start;
+    margin-bottom: 20px;
+  }
+  .task-form .radio-inputs label{
+    width: 100px;
+    justify-content: space-between;
+  }
+  .task-form .radio-inputs label:not(:last-child){
+    margin-bottom: 15px;
+  }
+  .task-form.visible {
+    justify-content: flex-start;  
+    height: 300px; 
+    overflow: auto;
+  }
 }

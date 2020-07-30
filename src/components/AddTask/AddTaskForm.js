@@ -33,8 +33,10 @@ const AddTaskForm = () => {
     const defValue = e.target.value || currentTime;
     setTaskTime(getFormatedTime(defValue));
   };
-  const handleClick = () => {
-    setHiddenClass(!isHidden);
+  const handleClick = (con) => {
+    if(taskName) {
+      setHiddenClass(!isHidden);
+    }
   };
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -60,6 +62,7 @@ const AddTaskForm = () => {
         onChange={getTaskName}
         type="text"
         maxLength="40"
+        required
         placeholder="What you need to do?"
       />
       <h2 className="at">At</h2>
@@ -116,8 +119,9 @@ const AddTaskForm = () => {
           <div className="custom-radio"></div>
         </label>
       </div>
-      <button className="hidden-form" type="button" onClick={handleClick}>
-        btn
+      <button className="hidden-form" type="button" onClick={()=> {
+        setHiddenClass(!isHidden)
+      }}>
       </button>
       <button className="save-task" onClick={handleClick} type="submit">
         Save
