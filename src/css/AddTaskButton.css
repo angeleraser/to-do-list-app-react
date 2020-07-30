@@ -1,0 +1,36 @@
+.add-task-button {
+  height: 80px;
+  width: 100%;
+  border-radius: 40px;
+  outline: none;
+  border: none;
+  background-color: var(--primary-blue);
+  font-size: 18px;
+  font-family: "Manrope", sans-serif;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10;
+  position: absolute;
+  bottom: 0;
+  transition: all 1s;
+}
+.add-task-button.hidden{
+  transform: translateX(-100%);
+} 
+.add-task-button::before {
+  content: "";
+  height: 35px;
+  width: 35px;
+  background-image: url(../images/add-1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
+  display: inline-block;
+  border-radius: 99999px;
+  background-color: #fff;
+  margin-right: 10px;
+}

@@ -1,0 +1,171 @@
+.task-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  height: 0px;
+  width: 100%;
+  z-index: 30;
+  transition: all 0.9s;
+  border-radius: 40px;
+  font-family: "Manrope", sans-serif;
+  background-color: var(--primary-blue);
+}
+.task-form.visible {
+  height: 540px;
+}
+.task-form::after {
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin: 30px 0 40px;
+}
+.task-form input[type="text"] {
+  border: none;
+  outline: none;
+  background-color: var(--primary-blue) !important;
+  appearance: none;
+  color: #fff;
+  font-family: "Manrope", sans-serif;
+  font-size: 30px;
+  width: 90%;
+  padding-bottom: 30px;
+  order: 2;
+  transform: translateX(-200%);
+  transition: all 0.9s;
+  /* border-bottom: 1px solid var(--tertiary-blue); */
+}
+.task-form input[type="datetime-local"] {
+  order: 2;
+  width: 90%;
+  border-radius: 4px;
+  font-size: 20px;
+  height: 60px;
+  font-family: "Manrope", sans-serif;
+  border: none;
+  transform: translateX(-200%);
+  transition: all 0.9s;
+  outline: none;
+  padding: 8px;
+  color: var(--primary-blue);
+  text-align: center;
+}
+.task-form ::selection {
+  background-color: #fff;
+  color: var(--primary-blue);
+}
+
+.task-form input[type="text"]::placeholder {
+  color: var(--tertiary-blue);
+  text-align: center;
+  font-family: "Manrope", sans-serif;
+}
+
+.task-form button.save-task {
+  outline: none;
+  border: none;
+  order: 2;
+  background-color: #fff;
+  width: 86px;
+  cursor: pointer;
+  height: 50px;
+  font-size: 18px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: var(--primary-black);
+  align-self: flex-end;
+  margin: auto 24px 24px 0;
+  transform: translateX(200%);
+  font-family: "Manrope", sans-serif;
+  transition: all 0.9s;
+}
+.task-form.visible button.save-task {
+  transform: translateX(0%);
+}
+.task-form.task-form.visible input[type="text"],
+.task-form.visible input[type="datetime-local"],
+.task-form.visible h2,
+.task-form.visible .radio-inputs {
+  transform: translateX(0%);
+}
+.task-form h2 {
+  order: 2;
+  width: 100%;
+  font-size: 24px;
+  margin: 25px 0 0;
+  color: #fff;
+  padding: 20px 22px;
+  transition: all 0.9s;
+  transform: translateX(-200%);
+  border-top: 1px solid var(--tertiary-blue);
+}
+.task-form h2.at {
+  padding: 10px 22px;
+}
+.task-form .radio-inputs {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  order: 2;
+  transition: all 0s;
+  justify-content: flex-start;
+  font-size: 14px;
+  transform: translateX(-200%);
+  padding: 0 22px 30px;
+  transition: all .9s;
+  border-bottom: 1px solid var(--tertiary-blue);
+}
+
+.task-form .radio-inputs label {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  position: relative;
+  cursor: pointer;
+}
+.task-form .radio-inputs label:not(:last-child) {
+  margin-right: 12px;
+}
+.task-form .radio-inputs input {
+  margin-left: 10px;
+  transform: scale(1.5);
+  visibility: hidden;
+}
+
+.task-form label .custom-radio {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1px solid #fff;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.task-form label .custom-radio::after {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
+  visibility: hidden;
+}
+
+.task-form label input[type="radio"]:checked + .custom-radio::after {
+  visibility: visible;
+}
+
+.task-form .hidden-form {
+  position: absolute;
+  top: 20px;
+  opacity: 0;
+  height: 30px;
+  width: 50px;
+  cursor: pointer;
+}

@@ -1,0 +1,66 @@
+.list-toggle {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  padding: 15px 12px;
+  margin-bottom: 10px;
+  border-bottom: 2px dashed var(--secondary-blue);
+  position: relative;
+}
+.list-toggle button {
+  height: 50px;
+  display: flex;
+  border: none;
+  outline: none;
+  font-family: "Manrope", sans-serif;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  font-size: 16px;
+  background-color: transparent;
+  color: var(--primary-black);
+  border-radius: 40px;
+  font-weight: 700;
+  cursor: pointer;
+  z-index: 20;
+  position: relative;
+}
+.list-toggle button.active {
+  color: var(--primary-blue);
+}
+.list-toggle .button-bg {
+  position: absolute;
+  height: 50px;
+  width: 40%;
+  background-color: var(--secondary-blue);
+  border-radius: 40px;
+  z-index: 10;
+  left: 0;
+  transition: all 0.4s;
+}
+.list-toggle .button-bg.undone-btn {
+  left: 25px;
+}
+.list-toggle .button-bg.completed-btn {
+  left: 185px;
+}
+
+.list-toggle .task-count {
+  position: absolute;
+  right: 12px;
+  bottom: 48%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+  color: #fff;
+  background-color: var(--primary-red);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.list-toggle button.completed .task-count {
+  background-color: #6ccc52;
+  right: 0px;
+}

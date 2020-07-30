@@ -1,0 +1,13 @@
+.add-task-wrapper{
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-blue);
+  align-items: center;
+  min-height: 80px;
+  border-radius: 40px;
+  align-self: flex-end;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  overflow-x: hidden;
+}

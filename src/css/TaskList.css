@@ -1,0 +1,67 @@
+.task-list {
+  width: 348px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  overflow-y: auto;
+  position: absolute;
+  transition: all 0.4s;
+}
+.task-list.undone-tasks.displayed {
+  left: 5px;
+}
+.task-list.undone-tasks.hidden {
+  left: -100%;
+}
+.task-list.completed-tasks.hidden {
+  right: -100%;
+}
+.task-list.completed-tasks.displayed {
+  right: 5px;
+}
+/* width */
+.task-list::-webkit-scrollbar {
+  width: 8px;
+}
+.task-list .task-card:not(:last-child) {
+  margin-bottom: 20px;
+}
+/* Track */
+.task-list::-webkit-scrollbar-track {
+  background-color: var(--secondary-blue);
+  border-radius: 10px;
+}
+
+/* Handle */
+.task-list::-webkit-scrollbar-thumb {
+  background-color: var(--primary-blue);
+  border-radius: 10px;
+}
+
+.task-list.completed-tasks .task-card button.complete-task {
+  display: none;
+}
+.task-list.completed-tasks .task-card .buttons-wrapper {
+  justify-content: center;
+}
+.task-list.completed-tasks .task-card h2 {
+  text-decoration: line-through;
+  font-style: italic;
+  position: relative;
+}
+.task-list.completed-tasks .task-card{
+  background-color:#85d1bc;
+}
+
+.task-list.completed-tasks p {
+  color: #ffffff;
+}
+.task-list .bg-text {
+  position: absolute;
+  font-size: 22px;
+  top: 27%;
+  text-align: center;
+  color: var(--primary-gray);
+}

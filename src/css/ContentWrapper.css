@@ -1,0 +1,88 @@
+.content-wrapper {
+  width: 360px;
+  min-width: 360px;
+  background-color: var(--light-cyan);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-family: "Manrope", sans-serif;
+  height: 100%;
+  max-height: 640px;
+  padding-bottom: 20px;
+  position: relative;
+  overflow: hidden;
+  flex: 1 0 100%;
+}
+
+.content-wrapper > h1 {
+  font-size: 32px;
+  font-weight: 700;
+  height: 50px;
+  border-bottom: 2px solid var(--primary-black);
+  margin-bottom: 40px;
+  font-style: italic;
+  position: relative;
+}
+.content-wrapper > h1::after {
+  content: "";
+  display: inline-block;
+  width: 40px;
+  height: 60px;
+  background-image: url(../images/edit.png);
+  background-size: 100%;
+  background-position: center 90%;
+  background-repeat: no-repeat;
+  background-color: var(--light-cyan);
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  animation: writingPencil ease-out 1.5s forwards;
+  animation-delay: .4s;
+}
+
+.content-wrapper > h1 .box {
+  position: absolute;
+  width: 110%;
+  height: 60px;
+  bottom: -5px;
+  background-color:var(--light-cyan);
+  animation: writingPencil ease-out 1.5s forwards;
+  animation-delay: .4s;
+  border-radius: 40px;
+}
+
+.content-wrapper span.blue {
+  color: var(--light-cyan);
+  background-color: var(--primary-blue);
+  border-radius: 40px;
+  padding: 2px 0px 2px 3px;
+}
+
+#root > h2 {
+  font-family: "Manrope", sans-serif;
+  display: none;
+  font-weight: 700;
+}
+#root > h2 span {
+  color: var(--primary-blue);
+}
+@media screen and (min-width:361px) {
+  .content-wrapper {
+    border-radius: 40px;
+  }
+}
+@media screen and (min-width:600px) {
+  #root > h2 {
+    display: block;
+  }
+} 
+@keyframes writingPencil {
+  from{
+    left: 0;
+  }
+  to{
+    left: 102%;
+  }
+}
+
