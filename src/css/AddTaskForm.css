@@ -189,11 +189,6 @@
   border-radius: 10px;
 }
 
-@media screen and (min-width:600px) {
-  .task-form .radio-inputs {
-    font-size: 14px;
-  }
-}
 @media screen and (max-height:500px){
 
   .task-form.visible input[type = "datetime-local"], .task-form::after, .task-form .save-task {
