@@ -1,9 +1,8 @@
 export const getDateNow = () => {
   const dateNow = new Date();
+  const [,,day] = dateNow.toDateString().split(" ");
   const getFormatedNumber = (n) => (n < 10 ? `0${n}` : n);
-  return `${dateNow.getFullYear()}-${getFormatedNumber(
-    dateNow.getMonth()
-  )}-${getFormatedNumber(dateNow.getDay())}T${getFormatedNumber(
+  return `${dateNow.getFullYear()}-${getFormatedNumber(dateNow.getMonth() + 1)}-${day}T${getFormatedNumber(
     dateNow.getHours()
   )}:${getFormatedNumber(dateNow.getMinutes())}`;
 };

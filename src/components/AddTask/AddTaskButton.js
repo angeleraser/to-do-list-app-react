@@ -10,6 +10,7 @@ const AddTaskButton = () => {
     setHiddenClass(!isHidden);
     setCurrentTime(getDateNow());
   };
+
   return (
     <button
       onClick={handleClick}
