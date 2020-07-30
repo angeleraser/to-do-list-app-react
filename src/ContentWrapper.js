@@ -14,7 +14,15 @@ const ContentWrapper = () => {
         <TaskListsWrapper />
         <AddTask />
       </div>
-      <h2>By <span>@angeleraser</span></h2>
+      <h2>
+        By{" "}
+        <a
+          href="https://github.com/angeleraser/"
+          rel="noopener noreferrer"
+          target="_blank">
+          @angeleraser
+        </a>
+      </h2>
     </MainContentProvider>
   );
 };

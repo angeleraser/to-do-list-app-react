@@ -64,8 +64,9 @@
   display: none;
   font-weight: 700;
 }
-#root > h2 span {
+#root > h2 a {
   color: var(--primary-blue);
+  text-decoration: none;
 }
 @media screen and (min-width:361px) {
   .content-wrapper {
