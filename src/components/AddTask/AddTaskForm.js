@@ -44,7 +44,7 @@ const AddTaskForm = () => {
     if (taskName) {
       saveIDCounter(taskID || 0);
       setTaskID(getIDCount() + 1);
-      addTaskToList([...taskList, createTask()]);
+      addTaskToList([createTask(),...taskList]);
     }
     setTaskName("");
   };
