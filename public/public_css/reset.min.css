@@ -81,10 +81,8 @@ body {
   justify-content:center;
   width: 100%;
   background-color: hsl(0, 100%, 74%);
-  max-width: 1440px;
   margin: 0 auto;
   height: 100%;
-  max-height: 800px;
   background-image: url(../../src/images/bg-intro-desktop.png);
   background-size:cover;
   background-repeat: no-repeat;
